@@ -105,6 +105,15 @@ const MapSlide = () => {
 };
 
 const USMapSlide = () => {
+  const [loopKey, setLoopKey] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setLoopKey(prev => prev + 1);
+    }, 8000); // Loop entire sequence every 8 seconds
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <motion.div 
       variants={containerVariants} 
@@ -129,7 +138,7 @@ const USMapSlide = () => {
       />
       
       {/* Flight Paths */}
-      <svg style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', pointerEvents: 'none', zIndex: 10 }}>
+      <svg key={loopKey} style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', pointerEvents: 'none', zIndex: 10 }}>
         {/* Ann Arbor (353, 248) -> Orlando (399, 427) */}
         <motion.path 
           d="M 353 248 Q 420 300 399 427" 
@@ -139,7 +148,7 @@ const USMapSlide = () => {
           strokeDasharray="8 8"
           initial={{ pathLength: 0, opacity: 0 }}
           animate={{ pathLength: 1, opacity: 1 }}
-          transition={{ duration: 1.5, delay: 1, repeat: Infinity, repeatType: 'loop', repeatDelay: 3 }}
+          transition={{ duration: 1.5, delay: 1 }}
         />
         {/* Orlando (399, 427) -> Seattle (84, 194) */}
         <motion.path 
@@ -150,7 +159,7 @@ const USMapSlide = () => {
           strokeDasharray="8 8"
           initial={{ pathLength: 0, opacity: 0 }}
           animate={{ pathLength: 1, opacity: 1 }}
-          transition={{ duration: 1.5, delay: 2.5, repeat: Infinity, repeatType: 'loop', repeatDelay: 3 }}
+          transition={{ duration: 1.5, delay: 2.5 }}
         />
       </svg>
 
