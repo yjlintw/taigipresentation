@@ -37,7 +37,7 @@ const MapSlide = () => {
     >
       <motion.img 
         variants={itemVariants}
-        src="/taiwan_map.png" 
+        src="./taiwan_map.png" 
         alt="Taiwan Map"
         style={{ 
           position: 'absolute',
@@ -114,7 +114,7 @@ const USMapSlide = () => {
     >
       <motion.img 
         variants={itemVariants}
-        src="/us_map.png" 
+        src="./us_map.png" 
         alt="USA Map"
         style={{ 
           position: 'absolute',
@@ -156,21 +156,21 @@ const USMapSlide = () => {
 
       {/* Logos on Map */}
       <motion.img 
-        src="/michigan_logo.png" 
+        src="./michigan_logo.png" 
         style={{ position: 'absolute', left: '380px', top: '190px', width: '60px', height: '60px', objectFit: 'contain' }} 
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ type: 'spring', delay: 0.5 }}
       />
       <motion.img 
-        src="/universal_logo.png" 
+        src="./universal_logo.png" 
         style={{ position: 'absolute', left: '420px', top: '390px', width: '60px', height: '60px', objectFit: 'contain' }} 
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ type: 'spring', delay: 1.5 }}
       />
       <motion.img 
-        src="/seattle_logo.png" 
+        src="./seattle_logo.png" 
         style={{ position: 'absolute', left: '20px', top: '140px', width: '60px', height: '60px', mixBlendMode: 'screen', opacity: 0.9 }} 
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 1, opacity: 0.9 }}
@@ -219,7 +219,7 @@ const MochiSlide = () => {
     >
       <motion.img 
         variants={itemVariants}
-        src="/mochi.jpg" 
+        src="./mochi.jpg" 
         alt="Mochi"
         style={{ 
           height: '450px', 
@@ -248,7 +248,7 @@ const NeighborSlide = () => {
     >
       <motion.img 
         variants={itemVariants}
-        src="/neighbor.jpg" 
+        src="./neighbor.jpg" 
         alt="Neighbor"
         style={{ 
           height: '450px', 
@@ -277,7 +277,7 @@ const VideoSlide = () => {
     >
       <motion.video 
         variants={itemVariants}
-        src="/video1.mp4" 
+        src="./video1.mp4" 
         autoPlay 
         loop 
         muted 
@@ -292,7 +292,7 @@ const VideoSlide = () => {
       />
       <motion.video 
         variants={itemVariants}
-        src="/video2.mp4" 
+        src="./video2.mp4" 
         autoPlay 
         loop 
         muted 
@@ -337,10 +337,10 @@ const CatSequenceSlide = ({ step }) => {
               exit={{ opacity: 0, scale: 0.9 }}
               style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem', position: 'absolute', width: '100%' }}
             >
-               <img src="/cat1.jpg" style={{ width: '100%', height: '260px', objectFit: 'cover', borderRadius: '16px', boxShadow: '0 10px 30px rgba(0,0,0,0.5)' }} />
-               <img src="/cat2.jpg" style={{ width: '100%', height: '260px', objectFit: 'cover', borderRadius: '16px', boxShadow: '0 10px 30px rgba(0,0,0,0.5)' }} />
-               <img src="/cat3.jpg" style={{ width: '100%', height: '260px', objectFit: 'cover', borderRadius: '16px', boxShadow: '0 10px 30px rgba(0,0,0,0.5)' }} />
-               <img src="/cat4.jpg" style={{ width: '100%', height: '260px', objectFit: 'cover', borderRadius: '16px', boxShadow: '0 10px 30px rgba(0,0,0,0.5)' }} />
+               <img src="./cat1.jpg" style={{ width: '100%', height: '260px', objectFit: 'cover', borderRadius: '16px', boxShadow: '0 10px 30px rgba(0,0,0,0.5)' }} />
+               <img src="./cat2.jpg" style={{ width: '100%', height: '260px', objectFit: 'cover', borderRadius: '16px', boxShadow: '0 10px 30px rgba(0,0,0,0.5)' }} />
+               <img src="./cat3.jpg" style={{ width: '100%', height: '260px', objectFit: 'cover', borderRadius: '16px', boxShadow: '0 10px 30px rgba(0,0,0,0.5)' }} />
+               <img src="./cat4.jpg" style={{ width: '100%', height: '260px', objectFit: 'cover', borderRadius: '16px', boxShadow: '0 10px 30px rgba(0,0,0,0.5)' }} />
             </motion.div>
           ) : (
             <motion.div 
@@ -349,7 +349,7 @@ const CatSequenceSlide = ({ step }) => {
               animate={{ opacity: 1, scale: 1 }}
               style={{ position: 'absolute', width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
             >
-              <img src="/doraemon.png" style={{ height: '400px', objectFit: 'contain', filter: 'drop-shadow(0 0 30px rgba(0,0,0,0.5))' }} />
+              <img src="./doraemon.png" style={{ height: '400px', objectFit: 'contain', filter: 'drop-shadow(0 0 30px rgba(0,0,0,0.5))' }} />
               <motion.div 
                 initial={{ opacity: 0, scale: 0, rotate: -30 }} 
                 animate={{ opacity: 1, scale: 1, rotate: 0 }} 
